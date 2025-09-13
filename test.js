@@ -1,1 +1,1 @@
-mani
+const name = "mani";
