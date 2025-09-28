@@ -1,10 +1,12 @@
-name: Hello World
+name: Testing On Push
 
 on:
-  workflow_dispatch:
-
+  push:
+    branches:
+      - main
 jobs:
-  say-hello-inline-bash:
-    runs-on: ubuntu-24.04
-    steps:
-      - run: echo "Hello from an inline bash script in a GitHub Action Workflow!"
+   say-hello:
+     runs-on: ubuntu-24.04
+     steps:
+       - run: echo "I did it"
+
