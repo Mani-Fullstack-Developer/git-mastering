@@ -3,7 +3,17 @@ name: Testing On Push
 on:
   push:
     branches:
-      - main
+      - test
+
+  
+  pull_request:
+    ## The default is to trigger on the following types of events:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+    
 jobs:
    say-hello:
      runs-on: ubuntu-24.04
