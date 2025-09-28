@@ -4,6 +4,21 @@ on:
   push:
     branches:
       - test
+
+  
+  pull_request:
+    ## The default is to trigger on the following types of events:
+    types:
+      - opened
+      - synchronize
+      - reopened
+    paths:
+      # include markdown files
+      - "03-core-features/filters/*.md"
+      # Exclude txt files
+      - "!03-core-features/filters/*.txt"
+
+    
 jobs:
    say-hello:
      runs-on: ubuntu-24.04
